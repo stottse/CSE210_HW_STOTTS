@@ -8,7 +8,7 @@ public class Entry{
         Prompt = randomPrompt;
 
     }
-
+    //The following is the method that will allow the user to display entries
     public void EnterEntry(){
         Console.WriteLine("Entry here:");
         DailyEntry = Console.ReadLine();

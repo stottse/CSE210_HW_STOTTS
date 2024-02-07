@@ -1,3 +1,4 @@
+
 public class Journal{
    public List<Entry> Entries = new List<Entry>();
    public void DisplayEntries(){
@@ -6,33 +7,39 @@ public class Journal{
         }
 
    }
-   public void LoadEntries(){
-        string filename = "myFile.txt";
+   //The following is the method that will allow the user to load entries
+   public void LoadEntries(string filename){
+        
         string[] lines = System.IO.File.ReadAllLines(filename);
 
         foreach (string line in lines)
 {
-    string[] parts = line.Split(",");
+    string[] parts = line.Split("-");
 
-    string firstName = parts[0];
-    string lastName = parts[1];
+    string date = parts[0].Trim();
+    string prompt = parts[1].Trim();
+    string dailyEntry = parts[2].Trim();
+
+    Entry entry = new Entry(prompt);
+    entry.Date = date;
+    entry.DailyEntry = dailyEntry;
+    Entries.Add(entry);
 }
 
         }
+        //The following is the method that will allow the user to save entries
     public void SaveEntries(string filename){
 
     string fileName = filename;
 
     using (StreamWriter outputFile = new StreamWriter(fileName))
     {
-    // You can add text to the file with the WriteLine method
+    
 
-    for (int i=0; i<Entries.Count(); i++){
+    for (int i=0; i<Entries.Count; i++){
             outputFile.WriteLine($"{Entries[i].Date} - {Entries[i].Prompt} - {Entries[i].DailyEntry}");
     }
-    // You can use the $ and include variables just like with Console.WriteLine
-    string color = "Blue";
-    outputFile.WriteLine($"My favorite color is {color}");
+    
     }
 
     }
