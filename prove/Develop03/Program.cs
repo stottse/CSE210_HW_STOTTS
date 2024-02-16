@@ -1,9 +1,15 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
+        Console.WriteLine("Welcome to Scripture Mastery");
+
+        
+
+        Console.Clear();
+
     }
 }
