@@ -4,30 +4,30 @@
 
 public class Reference{
 
-    private string book;
+    private string __book;
     public string Book {
-        get {return book;}
-        set {book = value;}
+        get {return __book;}
+        set {__book = value;}
     }
 
-    private int chapter;
+    private int __chapter;
     public int Chapter {
-        get {return chapter;}
-        set {chapter = value;}
+        get {return __chapter;}
+        set {__chapter = value;}
     }
     
     //This class will need one constructor for a single verse
     public Reference(string book, int chapter, int startVerse){
-        this.book = book;
-        this.chapter = chapter;
+        this.__book = book;
+        this.__chapter = chapter;
         // this.startVerse = startVerse;
         // this.endVerse = 0;
     }
 
     //This class will need another constructor for multiple verses
     public Reference(string book, int chapter, int startVerse, int endVerse){
-        this.book = book;
-        this.chapter = chapter;
+        this.__book = book;
+        this.__chapter = chapter;
         // this.startVerse = startVerse;
         // this.endVerse = endVerse;
     }

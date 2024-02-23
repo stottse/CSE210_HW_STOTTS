@@ -8,10 +8,10 @@ public class Scripture
 //This will need a constructor to accept reference and text of the scripture
 //Will need to pass List<Word> into this class or instead pass
 //in the whole string and then separate out the words into a list
-    private string text;
+    private string __text;
     public string Text {
-        get {return text;}
-        set {text = value;}
+        get {return __text;}
+        set {__text = value;}
     }
 
     private Reference reference;
@@ -20,7 +20,7 @@ public class Scripture
         set {reference = value;}
     }
 
-    private List<Word> words;
+    private List<Word> words; // declaring
 
     // Generic Getters and Setters
     // public string GetText()
@@ -36,18 +36,50 @@ public class Scripture
     public Scripture(Reference reference, string text)
     {
         this.reference = reference;
-        this.text = text;
-        string[] split = text.Split(" ");
+        this.__text = text;
+        // Console.WriteLine(this.text);
+        words = new List<Word>(); // initialization
+        string[] split = this.__text.Split(" ");
+        
+        // int count = 0;
         foreach(string word in split)
         {
-            Word newWord = new Word();
-            words.Append(newWord);
+            // count ++;
+            // Console.WriteLine($"count: {count}");
+            Word newWord = new Word(word);
+            words.Add(newWord);
         }
     }
 
     //Creating a member function to display the scripture
     public void ScriptureDisplay(){
+        // Display each word in the "words" list if it is hidden, or display
+        // underscores if it is hidden.
+    
+        // Console.WriteLine($"words.Count: {words.Count}");
 
+        foreach(Word word in words){
+            if(word.Hidden == false){
+                Console.Write(word.Text);
+            }
+            else if (word.Hidden == true){
+                foreach (char letter in word.Text){
+                    Console.Write("_");
+                }
+            }
+            Console.Write(" "); // Put a space between words
+        }
+    }
+    public void HideRandomWord(){
+        Random random = new Random();
+        int i;
+
+        do {
+            i = random.Next(0, words.Count);
+        } while(words[i].Hidden == true);
+
+        // hide the word
+        words[i].Hidden = true;
     }
 
 }
