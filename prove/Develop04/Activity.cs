@@ -13,11 +13,11 @@ public class Activity{
         //This is where the intro part will display to the user
         Console.WriteLine($"Welcome to the {__activityName} Activity!\n"); // welcome
         
-        Console.WriteLine($"_description\n"); // description of activity
+        Console.WriteLine($"{__description}\n"); // description of activity
         
         // Prompt the user for how long they'd like the activity to go for
         Console.WriteLine("How long would you like for this session to last (seconds)? ");
-        __duration = Int32.Parse(Console.ReadLine()); // get input in seconds
+       __duration = Int32.Parse(Console.ReadLine()); // get input in seconds
     }
 
     public void CountDown(int seconds) {
@@ -27,6 +27,10 @@ public class Activity{
             Thread.Sleep(1000); // wait for a sec
             Console.Write("\b \b"); // Erase the + character
         }
+    }
+    public void EndDisplay(){
+        Console.WriteLine("Good job! you completed an activity!");
+        Console.WriteLine($"You completed another {__duration} seconds of the {__activityName} activity!");
     }
 }
 

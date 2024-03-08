@@ -3,4 +3,6 @@ public class ReflectionActivity : Activity{
         __activityName = activityName;
         __description = description;
     }
+
+    
 }
