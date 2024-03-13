@@ -25,6 +25,7 @@ class Program
             //This will go to the breathing activity class
             BreathingActivity breathingObject = new BreathingActivity("Breathing", "In this activity we will work on timed breathing to help you relax."); // get the toolbox
             Console.WriteLine();
+            breathingObject.DisplayOpeningScreen();
             breathingObject.Take_Breaths();
     
             Console.WriteLine();

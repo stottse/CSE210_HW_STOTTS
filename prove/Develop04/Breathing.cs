@@ -6,13 +6,14 @@ public class BreathingActivity : Activity
         
     }
     public void Take_Breaths(){
-        DisplayOpeningScreen();
-        int duration = __duration;
+
+        // int __duration = base.__duration;
         Console.WriteLine();
 
         // Start breathing activity
     Console.WriteLine("Starting breathing activity...");
-    for (int i = 0; i < duration; i++)
+
+    for (int i = 0; i < (__duration/3); i++)
     {
         // Alternate between "Breathe in..." and "Breathe out..."
         if (i % 2 == 0)
@@ -20,16 +21,12 @@ public class BreathingActivity : Activity
             Console.Clear();
             Console.WriteLine();
             Console.Write("Breathe in...");
-            
-            
         }
         else
         {
             Console.Clear();
             Console.WriteLine();
             Console.Write("Breathe out...");
-            
-            
         }
 
         // Pause for several seconds and show a countdown
