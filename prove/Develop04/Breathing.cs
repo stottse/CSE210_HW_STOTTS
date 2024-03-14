@@ -1,19 +1,17 @@
 public class BreathingActivity : Activity 
 {
-    public BreathingActivity(string activityName, string description) : base(activityName, description) {
-        __activityName = activityName;
-        __description = description;
+    public BreathingActivity(string activityName, string description) : base(activityName, description) 
+    {
+        _activityName = activityName;
+        _description = description;
+        
         
     }
-    public void Take_Breaths(){
+    public void Take_Breaths()
+    {
+        CountDown(5);
 
-        // int __duration = base.__duration;
-        Console.WriteLine();
-
-        // Start breathing activity
-        Console.WriteLine("Starting breathing activity...");
-
-        for (int i = 0; i < (__duration/3); i++)
+        for (int i = 0; i < (_duration/3); i++)
         {
             // Alternate between "Breathe in..." and "Breathe out..."
             if (i % 2 == 0)
@@ -32,11 +30,6 @@ public class BreathingActivity : Activity
             // Pause for several seconds and show a countdown
             CountDown(3); // Pause for 3 seconds before the next message
         }
-
-        // Display the standard finishing message
-        Console.WriteLine();
-        Console.WriteLine("Breathing activity completed.");
-        CountDown(5);
         
     }
         

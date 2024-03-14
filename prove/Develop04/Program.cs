@@ -36,20 +36,22 @@ class Program
         else if (decision == 2)
         {
             //This will go to the reflection activity class
-            ReflectionActivity reflectionObject = new ReflectionActivity("Refecting", "In this activity we will reflect on your successes and strengths.");
+            ReflectionActivity reflectionObject = new ReflectionActivity("Refecting", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.");
             Console.WriteLine();
             reflectionObject.DisplayOpeningScreen();
-
+            reflectionObject.Reflection_Time();
             reflectionObject.EndDisplay();
         }
 
         else if (decision == 3)
         {
             //This will go to the listing activity
-            ListingActivity listingObject = new ListingActivity("Listing", "In this activity we you will list out your strengths in a certain area");
+            ListingActivity listingObject = new ListingActivity("Listing", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
             Console.WriteLine();
-            listingObject.CountDown(10);
-            Console.WriteLine();
+            listingObject.DisplayOpeningScreen();
+            listingObject.Listing_Time();
+            listingObject.EndDisplay();
+
         }
 
         else{

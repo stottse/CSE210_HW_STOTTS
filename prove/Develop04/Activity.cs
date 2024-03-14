@@ -1,23 +1,30 @@
 
 public class Activity{
 
-    protected string  __activityName;
-    protected string  __description;
-    protected int     __duration;
+    protected string  _activityName;
+    protected string  _description;
+    protected int     _duration;
     public Activity(string activityName, string description) {
-        __activityName = activityName;
-        __description = description;
+        _activityName = activityName;
+        _description = description;
+        
+
     }
 
-    public void DisplayOpeningScreen(){
+    public void DisplayOpeningScreen()
+    {
         //This is where the intro part will display to the user
-        Console.WriteLine($"Welcome to the {__activityName} Activity!\n"); // welcome
+        Console.WriteLine($"Welcome to the {_activityName} Activity!\n"); // welcome
         
-        Console.WriteLine($"{__description}\n"); // description of activity
+        Console.WriteLine($"{_description}\n"); // description of activity
         
         // Prompt the user for how long they'd like the activity to go for
         Console.WriteLine("How long would you like for this session to last (seconds)? ");
-       __duration = Int32.Parse(Console.ReadLine()); // get input in seconds
+        _duration = Int32.Parse(Console.ReadLine()); // get input in seconds
+
+        Console.WriteLine();
+        Console.WriteLine($"Starting {_activityName} Activity...");
+
     }
 
     public void CountDown(int seconds) {
@@ -29,8 +36,8 @@ public class Activity{
         }
     }
     public void EndDisplay(){
-        Console.WriteLine("Good job! You completed an activity!");
-        Console.WriteLine($"You completed another {__duration} seconds of the {__activityName} activity!");
+        Console.WriteLine($"Good job! You completed the {_activityName} activity!");
+        Console.WriteLine($"You completed another {_duration} seconds of the {_activityName} activity!");
     }
 }
 
