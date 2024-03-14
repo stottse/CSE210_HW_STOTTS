@@ -29,7 +29,7 @@ public class Activity{
         }
     }
     public void EndDisplay(){
-        Console.WriteLine("Good job! you completed an activity!");
+        Console.WriteLine("Good job! You completed an activity!");
         Console.WriteLine($"You completed another {__duration} seconds of the {__activityName} activity!");
     }
 }
