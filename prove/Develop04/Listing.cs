@@ -31,6 +31,10 @@ public class ListingActivity : Activity
         //initial value for number of inputs
         _itemsInput = 0;
 
+
+        Console.WriteLine(_duration);
+
+
         DateTime startTime = DateTime.Now;
         DateTime futureTime = startTime.AddSeconds(_duration);
 
@@ -42,6 +46,7 @@ public class ListingActivity : Activity
             Console.Write("List item:");
             Console.ReadLine();
             _itemsInput +=1 ;
+            currentTime = DateTime.Now;
         }
         
         Console.WriteLine($"You listed {_itemsInput} things.");

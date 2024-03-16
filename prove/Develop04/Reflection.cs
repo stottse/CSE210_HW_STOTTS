@@ -53,6 +53,7 @@ public class ReflectionActivity : Activity
 
             // Pause for several seconds and show a countdown
             CountDown(8); // Pause for 8 seconds before the next message
+            currentTime = DateTime.Now;
 
         }
 
