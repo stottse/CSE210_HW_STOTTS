@@ -1,8 +1,6 @@
 public abstract class Window {
     protected double _surfaceArea;
-    public
-    
-     int _numPanes;
+    public int _numPanes;
     public abstract double ComputeSurfaceArea();
     public virtual void SetPanes() {
         _numPanes = 2;

@@ -8,7 +8,6 @@ class Program
     static void Main(string[] args)
     {
     
-
         //The following part is going to let the user select which activity they want to do:
 
         Console.WriteLine("Please enter the number for which activity you would like to do.");
