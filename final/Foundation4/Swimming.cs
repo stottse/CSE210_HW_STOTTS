@@ -23,5 +23,4 @@ public class Swimming : Activity
     {
         return Math.Round((_duration /60) / GetDistance(), 2);
     }
-
 }

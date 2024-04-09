@@ -24,5 +24,4 @@ public class Cycling : Activity
     {
         return Math.Round(60/_speed,2);
     }
-
 }

@@ -21,5 +21,4 @@ public abstract class Activity
         return $"{_date} {GetType().Name} ({_duration} min) - Distance: {GetDistance()} miles, Speed: {GetSpeed()} mph, Pace: {GetPace()} min per mile";
 
     }
-
 }

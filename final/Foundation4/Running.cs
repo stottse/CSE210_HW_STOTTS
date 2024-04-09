@@ -23,6 +23,4 @@ public class Running: Activity
     {
         return Math.Round(_duration/_distance,2);
     }
-
-
 }
