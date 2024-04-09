@@ -12,19 +12,15 @@ public class Address{
         _country = country;
     }
 
-    public bool checkStateside()
+    //Checks to see if shipping is within the USA
+    public bool IsInUSA()
     {
-        if (_country == "USA"){
-            return true;
-        }
-        else {
-            return false;
-        }
-        
+        return _country == "USA";  
 
     }
 
-    public string getAddress(){
+    //The following gets the address for the order:
+    public string GetAddress(){
         return ($"{_street}, {_city}, {_state}, {_country}");
     }
 }
